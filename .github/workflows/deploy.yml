@@ -22,10 +22,8 @@ jobs:
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
 
-      - name: Publish to Maven Central
-        run: |
-          cd java-core-lib
-          mvn clean deploy -B -DskipTests
+      - name: Publish to Maven Central Platform
+        run: mvn clean deploy -B -DskipTests
         env:
           MAVEN_USERNAME: ${{ secrets.CENTRAL_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.CENTRAL_PASSWORD }}
@@ -40,6 +38,6 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            java-core-lib/target/*.jar
+            target/*.jar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

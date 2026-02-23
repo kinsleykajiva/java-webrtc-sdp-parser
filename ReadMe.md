@@ -14,20 +14,84 @@
 
 ## Table of Contents
 
-1. [Why This Exists](#why-this-exists)
-2. [Background — What Is SDP?](#background--what-is-sdp)
-3. [RFC 4566 Field Reference](#rfc-4566-field-reference)
-4. [Architecture & Class Map](#architecture--class-map)
-5. [How Parsing Works](#how-parsing-works)
-6. [Attribute Parsing Deep-Dive](#attribute-parsing-deep-dive)
-7. [Reconstructing SDP from Objects](#reconstructing-sdp-from-objects)
-8. [Usage Examples](#usage-examples)
-9. [Supported Attributes](#supported-attributes)
-10. [Known Limitations & Edge Cases](#known-limitations--edge-cases)
-11. [Running the Batch Validator](#running-the-batch-validator)
-12. [Contributing](#contributing)
-13. [Inspiration & Credits](#inspiration--credits)
-14. [License](#license)
+1. [Installation](#installation)
+2. [Quick Start](#quick-start)
+3. [Why This Exists](#why-this-exists)
+4. [Background — What Is SDP?](#background--what-is-sdp)
+5. [RFC 4566 Field Reference](#rfc-4566-field-reference)
+6. [Architecture & Class Map](#architecture--class-map)
+7. [How Parsing Works](#how-parsing-works)
+8. [Attribute Parsing Deep-Dive](#attribute-parsing-deep-dive)
+9. [Reconstructing SDP from Objects](#reconstructing-sdp-from-objects)
+10. [Usage Examples](#usage-examples)
+11. [Supported Attributes](#supported-attributes)
+12. [Known Limitations & Edge Cases](#known-limitations--edge-cases)
+13. [Running the Batch Validator](#running-the-batch-validator)
+14. [Contributing](#contributing)
+15. [Inspiration & Credits](#inspiration--credits)
+16. [License](#license)
+
+---
+
+## Installation
+
+### Maven
+Add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.github.kinsleykajiva</groupId>
+    <artifactId>java-webrtc-sdp-parser</artifactId>
+    <version>0.3.2</version>
+</dependency>
+```
+
+### Gradle
+
+**Groovy:**
+```groovy
+implementation 'io.github.kinsleykajiva:java-webrtc-sdp-parser:0.3.2'
+```
+
+**Kotlin:**
+```kotlin
+implementation("io.github.kinsleykajiva:java-webrtc-sdp-parser:0.3.2")
+```
+
+---
+
+## Quick Start
+
+Here is a simple example of how to parse and reconstruct an SDP session:
+
+```java
+import io.github.kinsleykajiva.SdpParser;
+import io.github.kinsleykajiva.SdpSession;
+
+public class Demo {
+    public static void main(String[] args) {
+        String rawSdp = """
+            v=0
+            o=- 4294967296 2 IN IP4 127.0.0.1
+            s=-
+            t=0 0
+            m=audio 9 RTP/AVP 0
+            a=rtpmap:0 PCMU/8000
+            """.stripIndent().replace("\n", "\r\n");
+
+        // 1. Parse the SDP string into an immutable object model
+        SdpSession session = SdpParser.parse(rawSdp);
+
+        // 2. Access session information
+        System.out.println("Session Name: " + session.sessionName());
+        System.out.println("Media count: " + session.mediaSections().size());
+
+        // 3. Reconstruct into a valid SDP string
+        String reconstructed = session.toString();
+        System.out.println("Reconstructed SDP:\\n" + reconstructed);
+    }
+}
+```
 
 ---
 

@@ -1,0 +1,1632 @@
+C:\Users\Kinsley\.jdks\liberica-full-24.0.2\bin\java.exe --enable-preview "-javaagent:C:\Users\Kinsley\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\idea_rt.jar=53509" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\Kinsley\IdeaProjects\webrtc-sdp\java-core-lib\target\classes io.github.kinsleykajiva.Main
+╔══════════════════════════════════════════════════════════════╗
+║            WebRTC SDP Parser — Batch Validation              ║
+║         Files: 02.sdp  →  40.sdp                             ║
+╚══════════════════════════════════════════════════════════════╝
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 02.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 03.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Attributes (a=): 28 total
+               rtpmap                  ×2
+                   ↳ 120 VP8/90000
+                   ↳ 122 red/90000
+               rtcp-fb                 ×25
+                   ↳ 120 ack rpsi
+                   ↳ 120 ack app
+                   ↳ 120 ack app foo
+                   ↳ 120 ack foo bar
+                   ↳ 120 ack foo bar baz
+                   ↳ 120 nack
+                   ↳ 120 nack pli
+                   ↳ 120 nack sli
+                   ↳ 120 nack rpsi
+                   ↳ 120 nack app
+                   ↳ 120 nack app foo
+                   ↳ 120 nack app foo bar
+                   ↳ 120 nack foo bar baz
+                   ↳ 120 trr-int 0
+                   ↳ 120 trr-int 123
+                   ↳ 120 goog-remb
+                   ↳ 120 ccm fir
+                   ↳ 120 ccm tmmbr
+                   ↳ 120 ccm tstr
+                   ↳ 120 ccm vbcm 123 456 789
+                   ↳ 120 ccm foo
+                   ↳ 120 ccm foo bar baz
+                   ↳ 120 foo
+                   ↳ 120 foo bar
+                   ↳ 120 foo bar baz
+               extmap                  ×1    1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  │  a=rtpmap:122 red/90000
+  │  a=rtcp-fb:120 ack rpsi
+  │  a=rtcp-fb:120 ack app
+  │  a=rtcp-fb:120 ack app foo
+  │  a=rtcp-fb:120 ack foo bar
+  │  a=rtcp-fb:120 ack foo bar baz
+  │  a=rtcp-fb:120 nack
+  │  a=rtcp-fb:120 nack pli
+  │  a=rtcp-fb:120 nack sli
+  │  a=rtcp-fb:120 nack rpsi
+  │  a=rtcp-fb:120 nack app
+  │  a=rtcp-fb:120 nack app foo
+  │  a=rtcp-fb:120 nack app foo bar
+  │  a=rtcp-fb:120 nack foo bar baz
+  │  a=rtcp-fb:120 trr-int 0
+  │  a=rtcp-fb:120 trr-int 123
+  │  a=rtcp-fb:120 goog-remb
+  │  a=rtcp-fb:120 ccm fir
+  │  a=rtcp-fb:120 ccm tmmbr
+  │  a=rtcp-fb:120 ccm tstr
+  │  a=rtcp-fb:120 ccm vbcm 123 456 789
+  │  a=rtcp-fb:120 ccm foo
+  │  a=rtcp-fb:120 ccm foo bar baz
+  │  a=rtcp-fb:120 foo
+  │  a=rtcp-fb:120 foo bar
+  │  a=rtcp-fb:120 foo bar baz
+  │  a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 04.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): (none at session level)
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 198.51.100.7
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  c=IN IP4 198.51.100.7
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 05.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    ice-lite                ×1    (flag — presence only)
+  └─ Media Sections (m=): 0
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=ice-lite
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 06.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Bandwidth      (b=): CT:5000, FOOBAR:10, AS:4
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 2
+     ├─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+     │       Attributes (a=): 1 total
+     │         rtpmap                  ×1    120 VP8/90000
+     └─ [2] type=audio     port=12345   proto=RTP/SAVPF       fmt=[0]
+             Attributes (a=): 1 total
+               rtpmap                  ×1    0 PCMU/8000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  b=CT:5000
+  │  b=FOOBAR:10
+  │  b=AS:4
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  │  m=audio 12345/2 RTP/SAVPF 0
+  │  a=rtpmap:0 PCMU/8000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 07.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): (none)
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Bandwidth  (b=): CT:1000
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=
+  │  c=IN IP4 198.51.100.7
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  b=CT:1000
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 08.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 11 attributes
+  │    ice-ufrag               ×1    4a799b2e
+  │    ice-pwd                 ×1    e4cc12a910f106a0a744719425510e17
+  │    ice-lite                ×1    (flag — presence only)
+  │    ice-options             ×1    trickle foo
+  │    msid-semantic           ×2
+  │        ↳ WMS stream streama
+  │        ↳ foo stream
+  │    fingerprint             ×1    sha-256 DF:2E:AC:8A:FD:0A:8E:99:BF:5D:E8:3C:E7:FA:FB:08:3B:3C:54:1D:D…
+  │    identity                ×1    eyJpZHAiOnsiZG9tYWluIjoiZXhhbXBsZS5vcmciLCJwcm90b2NvbCI6ImJvZ3VzIn0sI…
+  │    group                   ×3
+  │        ↳ BUNDLE first second
+  │        ↳ BUNDLE third
+  │        ↳ LS first third
+  └─ Media Sections (m=): 3
+     ├─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+     │       Connection (c=): IN IP4 0.0.0.0
+     │       Attributes (a=): 27 total
+     │         mid                     ×1    first
+     │         rtpmap                  ×5
+     │             ↳ 109 opus/48000/2
+     │             ↳ 9 G722/8000
+     │             ↳ 0 PCMU/8000
+     │             ↳ 8 PCMA/8000
+     │             ↳ 101 telephone-event/8000
+     │         ptime                   ×1    20
+     │         maxptime                ×1    20
+     │         fmtp                    ×1    101 0-15,66,32-34,67
+     │         ice-ufrag               ×1    00000000
+     │         ice-pwd                 ×1    0000000000000000000000000000000
+     │         sendonly                ×1    (flag — presence only)
+     │         extmap                  ×1    1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+     │         setup                   ×1    actpass
+     │         rtcp-mux                ×1    (flag — presence only)
+     │         msid                    ×1    stream track
+     │         candidate               ×8
+     │             ↳ 0 1 UDP 2130379007 10.0.0.36 62453 typ host
+     │             ↳ 2 1 UDP 1694236671 24.6.134.204 62453 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 3 1 UDP 100401151 162.222.183.171 49761 typ relay raddr 162.222.1…
+     │             ↳ 6 1 UDP 16515071 162.222.183.171 51858 typ relay raddr 162.222.18…
+     │             ↳ 3 2 UDP 100401150 162.222.183.171 62454 typ relay raddr 162.222.1…
+     │             ↳ 2 2 UDP 1694236670 24.6.134.204 55428 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 6 2 UDP 16515070 162.222.183.171 50340 typ relay raddr 162.222.18…
+     │             ↳ 0 2 UDP 2130379006 10.0.0.36 55428 typ host
+     │         rtcp                    ×1    62454 IN IP4 162.222.183.171
+     │         end-of-candidates       ×1    (flag — presence only)
+     │         ssrc                    ×1    5150
+     ├─ [2] type=video     port=9       proto=RTP/SAVPF       fmt=[120, 121, 122, 123]
+     │       Connection (c=): IN IP6 ::1
+     │       Attributes (a=): 30 total
+     │         fingerprint             ×1    sha-1 DF:FA:FB:08:3B:3C:54:1D:D7:D4:05:77:A0:72:9B:14:08:6D:0F:4C:2E:…
+     │         mid                     ×1    second
+     │         rtpmap                  ×4
+     │             ↳ 120 VP8/90000
+     │             ↳ 121 VP9/90000
+     │             ↳ 122 red/90000
+     │             ↳ 123 ulpfec/90000
+     │         recvonly                ×1    (flag — presence only)
+     │         rtcp-fb                 ×6
+     │             ↳ 120 nack
+     │             ↳ 120 nack pli
+     │             ↳ 120 ccm fir
+     │             ↳ 121 nack
+     │             ↳ 121 nack pli
+     │             ↳ 121 ccm fir
+     │         setup                   ×1    active
+     │         rtcp-mux                ×1    (flag — presence only)
+     │         msid                    ×2
+     │             ↳ streama tracka
+     │             ↳ streamb trackb
+     │         candidate               ×8
+     │             ↳ 0 1 UDP 2130379007 10.0.0.36 59530 typ host
+     │             ↳ 0 2 UDP 2130379006 10.0.0.36 64378 typ host
+     │             ↳ 2 2 UDP 1694236670 24.6.134.204 64378 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 6 2 UDP 16515070 162.222.183.171 64941 typ relay raddr 162.222.18…
+     │             ↳ 6 1 UDP 16515071 162.222.183.171 64800 typ relay raddr 162.222.18…
+     │             ↳ 2 1 UDP 1694236671 24.6.134.204 59530 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 3 1 UDP 100401151 162.222.183.171 62935 typ relay raddr 162.222.1…
+     │             ↳ 3 2 UDP 100401150 162.222.183.171 61026 typ relay raddr 162.222.1…
+     │         rtcp                    ×1    61026
+     │         end-of-candidates       ×1    (flag — presence only)
+     │         ssrc                    ×2
+     │             ↳ 1111 foo
+     │             ↳ 1111 foo:bar
+     │         imageattr               ×1    120 send * recv *
+     └─ [3] type=audio     port=9       proto=RTP/SAVPF       fmt=[0]
+             Attributes (a=): 6 total
+               mid                     ×1    third
+               rtpmap                  ×1    0 PCMU/8000
+               ice-lite                ×1    (flag — presence only)
+               ice-options             ×1    foo bar
+               msid                    ×1    noappdata
+               bundle-only             ×1    (flag — presence only)
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=ice-ufrag:4a799b2e
+  │  a=ice-pwd:e4cc12a910f106a0a744719425510e17
+  │  a=ice-lite
+  │  a=ice-options:trickle foo
+  │  a=msid-semantic:WMS stream streama
+  │  a=msid-semantic:foo stream
+  │  a=fingerprint:sha-256 DF:2E:AC:8A:FD:0A:8E:99:BF:5D:E8:3C:E7:FA:FB:08:3B:3C:54:1D:D7:D4:05:77:A0:72:9B:14:08:6D:0F:4C
+  │  a=identity:eyJpZHAiOnsiZG9tYWluIjoiZXhhbXBsZS5vcmciLCJwcm90b2NvbCI6ImJvZ3VzIn0sImFzc2VydGlvbiI6IntcImlkZW50aXR5XCI6XCJib2JAZXhhbXBsZS5vcmdcIixcImNvbnRlbnRzXCI6XCJhYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3l6XCIsXCJzaWduYXR1cmVcIjpcIjAxMDIwMzA0MDUwNlwifSJ9
+  │  a=group:BUNDLE first second
+  │  a=group:BUNDLE third
+  │  a=group:LS first third
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=mid:first
+  │  a=rtpmap:109 opus/48000/2
+  │  a=ptime:20
+  │  a=maxptime:20
+  │  a=rtpmap:9 G722/8000
+  │  a=rtpmap:0 PCMU/8000
+  │  a=rtpmap:8 PCMA/8000
+  │  a=rtpmap:101 telephone-event/8000
+  │  a=fmtp:101 0-15,66,32-34,67
+  │  a=ice-ufrag:00000000
+  │  a=ice-pwd:0000000000000000000000000000000
+  │  a=sendonly
+  │  a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+  │  a=setup:actpass
+  │  a=rtcp-mux
+  │  a=msid:stream track
+  │  a=candidate:0 1 UDP 2130379007 10.0.0.36 62453 typ host
+  │  a=candidate:2 1 UDP 1694236671 24.6.134.204 62453 typ srflx raddr 10.0.0.36 rport 62453
+  │  a=candidate:3 1 UDP 100401151 162.222.183.171 49761 typ relay raddr 162.222.183.171 rport 49761
+  │  a=candidate:6 1 UDP 16515071 162.222.183.171 51858 typ relay raddr 162.222.183.171 rport 51858
+  │  a=candidate:3 2 UDP 100401150 162.222.183.171 62454 typ relay raddr 162.222.183.171 rport 62454
+  │  a=candidate:2 2 UDP 1694236670 24.6.134.204 55428 typ srflx raddr 10.0.0.36 rport 55428
+  │  a=candidate:6 2 UDP 16515070 162.222.183.171 50340 typ relay raddr 162.222.183.171 rport 50340
+  │  a=candidate:0 2 UDP 2130379006 10.0.0.36 55428 typ host
+  │  a=rtcp:62454 IN IP4 162.222.183.171
+  │  a=end-of-candidates
+  │  a=ssrc:5150
+  │  m=video 9 RTP/SAVPF 120 121 122 123
+  │  c=IN IP6 ::1
+  │  a=fingerprint:sha-1 DF:FA:FB:08:3B:3C:54:1D:D7:D4:05:77:A0:72:9B:14:08:6D:0F:4C:2E:AC:8A:FD:0A:8E:99:BF:5D:E8:3C:E7
+  │  a=mid:second
+  │  a=rtpmap:120 VP8/90000
+  │  a=rtpmap:121 VP9/90000
+  │  a=rtpmap:122 red/90000
+  │  a=rtpmap:123 ulpfec/90000
+  │  a=recvonly
+  │  a=rtcp-fb:120 nack
+  │  a=rtcp-fb:120 nack pli
+  │  a=rtcp-fb:120 ccm fir
+  │  a=rtcp-fb:121 nack
+  │  a=rtcp-fb:121 nack pli
+  │  a=rtcp-fb:121 ccm fir
+  │  a=setup:active
+  │  a=rtcp-mux
+  │  a=msid:streama tracka
+  │  a=msid:streamb trackb
+  │  a=candidate:0 1 UDP 2130379007 10.0.0.36 59530 typ host
+  │  a=candidate:0 2 UDP 2130379006 10.0.0.36 64378 typ host
+  │  a=candidate:2 2 UDP 1694236670 24.6.134.204 64378 typ srflx raddr 10.0.0.36 rport 64378
+  │  a=candidate:6 2 UDP 16515070 162.222.183.171 64941 typ relay raddr 162.222.183.171 rport 64941
+  │  a=candidate:6 1 UDP 16515071 162.222.183.171 64800 typ relay raddr 162.222.183.171 rport 64800
+  │  a=candidate:2 1 UDP 1694236671 24.6.134.204 59530 typ srflx raddr 10.0.0.36 rport 59530
+  │  a=candidate:3 1 UDP 100401151 162.222.183.171 62935 typ relay raddr 162.222.183.171 rport 62935
+  │  a=candidate:3 2 UDP 100401150 162.222.183.171 61026 typ relay raddr 162.222.183.171 rport 61026
+  │  a=rtcp:61026
+  │  a=end-of-candidates
+  │  a=ssrc:1111 foo
+  │  a=ssrc:1111 foo:bar
+  │  a=imageattr:120 send * recv *
+  │  m=audio 9 RTP/SAVPF 0
+  │  a=mid:third
+  │  a=rtpmap:0 PCMU/8000
+  │  a=ice-lite
+  │  a=ice-options:foo bar
+  │  a=msid:noappdata
+  │  a=bundle-only
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 09.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 27 total
+               mid                     ×1    first
+               rtpmap                  ×5
+                   ↳ 109 opus/48000/2
+                   ↳ 9 G722/8000
+                   ↳ 0 PCMU/8000
+                   ↳ 8 PCMA/8000
+                   ↳ 101 telephone-event/8000
+               ptime                   ×1    20
+               maxptime                ×1    20
+               fmtp                    ×19
+                   ↳ 101 0-15
+                   ↳ 101 0-5.
+                   ↳ 101 0-15,66,67
+                   ↳ 101 0,1,2-4,5-15,66,67
+                   ↳ 101 5,6,7
+                   ↳ 101 0
+                   ↳ 101 1
+                   ↳ 101 123
+                   ↳ 101 0-123
+                   ↳ 101 -12
+                   ↳ 101 12-
+                   ↳ 101 1,12-,4
+                   ↳ 101 ,2,3
+                   ↳ 101 ,,,2,3
+                   ↳ 101 1,,,,,,,,3
+                   ↳ 101 1,2,3,
+                   ↳ 101 1-2-3
+                   ↳ 101 112233
+                   ↳ 101 33-2
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  t=0 0
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=mid:first
+  │  a=rtpmap:109 opus/48000/2
+  │  a=ptime:20
+  │  a=maxptime:20
+  │  a=rtpmap:9 G722/8000
+  │  a=rtpmap:0 PCMU/8000
+  │  a=rtpmap:8 PCMA/8000
+  │  a=rtpmap:101 telephone-event/8000
+  │  a=fmtp:101 0-15
+  │  a=fmtp:101 0-5.
+  │  a=fmtp:101 0-15,66,67
+  │  a=fmtp:101 0,1,2-4,5-15,66,67
+  │  a=fmtp:101 5,6,7
+  │  a=fmtp:101 0
+  │  a=fmtp:101 1
+  │  a=fmtp:101 123
+  │  a=fmtp:101 0-123
+  │  a=fmtp:101 -12
+  │  a=fmtp:101 12-
+  │  a=fmtp:101 1,12-,4
+  │  a=fmtp:101 ,2,3
+  │  a=fmtp:101 ,,,2,3
+  │  a=fmtp:101 1,,,,,,,,3
+  │  a=fmtp:101 1,2,3,
+  │  a=fmtp:101 1-2-3
+  │  a=fmtp:101 112233
+  │  a=fmtp:101 33-2
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 10.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[97, 120, 121, 122, 123]
+             Connection (c=): IN IP6 ::1
+             Attributes (a=): 6 total
+               fingerprint             ×1    sha-1 DF:FA:FB:08:3B:3C:54:1D:D7:D4:05:77:A0:72:9B:14:08:6D:0F:4C
+               rtpmap                  ×5
+                   ↳ 97 H264/90000
+                   ↳ 120 VP8/90000
+                   ↳ 121 VP9/90000
+                   ↳ 122 red/90000
+                   ↳ 123 ulpfec/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  t=0 0
+  │  m=video 9 RTP/SAVPF 97 120 121 122 123
+  │  c=IN IP6 ::1
+  │  a=fingerprint:sha-1 DF:FA:FB:08:3B:3C:54:1D:D7:D4:05:77:A0:72:9B:14:08:6D:0F:4C
+  │  a=rtpmap:97 H264/90000
+  │  a=rtpmap:120 VP8/90000
+  │  a=rtpmap:121 VP9/90000
+  │  a=rtpmap:122 red/90000
+  │  a=rtpmap:123 ulpfec/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 11.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 8 attributes
+  │    ice-ufrag               ×1    4a799b2e
+  │    ice-pwd                 ×1    e4cc12a910f106a0a744719425510e17
+  │    ice-lite                ×1    (flag — presence only)
+  │    msid-semantic           ×1    WMS stream streama
+  │    fingerprint             ×1    sha-256 DF:2E:AC:8A:FD:0A:8E:99:BF:5D:E8:3C:E7:FA:FB:08:3B:3C:54:1D:D…
+  │    group                   ×3
+  │        ↳ BUNDLE first second
+  │        ↳ BUNDLE third
+  │        ↳ LS first third
+  └─ Media Sections (m=): 3
+     ├─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+     │       Connection (c=): IN IP4 0.0.0.0
+     │       Attributes (a=): 24 total
+     │         mid                     ×1    first
+     │         rtpmap                  ×5
+     │             ↳ 109 opus/48000/2
+     │             ↳ 9 G722/8000
+     │             ↳ 0 PCMU/8000
+     │             ↳ 8 PCMA/8000
+     │             ↳ 101 telephone-event/8000
+     │         ptime                   ×1    20
+     │         maxptime                ×1    20
+     │         fmtp                    ×1    101 0-15,66,32-34,67
+     │         ice-ufrag               ×1    00000000
+     │         ice-pwd                 ×1    0000000000000000000000000000000
+     │         sendonly                ×1    (flag — presence only)
+     │         extmap                  ×1    1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+     │         setup                   ×1    actpass
+     │         rtcp-mux                ×1    (flag — presence only)
+     │         msid                    ×1    stream track
+     │         candidate               ×8
+     │             ↳ 0 1 UDP 2130379007 10.0.0.36 62453 typ host
+     │             ↳ 2 1 UDP 1694236671 24.6.134.204 62453 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 3 1 UDP 100401151 162.222.183.171 49761 typ relay raddr 162.222.1…
+     │             ↳ 6 1 UDP 16515071 162.222.183.171 51858 typ relay raddr 162.222.18…
+     │             ↳ 3 2 UDP 100401150 162.222.183.171 62454 typ relay raddr 162.222.1…
+     │             ↳ 2 2 UDP 1694236670 24.6.134.204 55428 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 6 2 UDP 16515070 162.222.183.171 50340 typ relay raddr 162.222.18…
+     │             ↳ 0 2 UDP 2130379006 10.0.0.36 55428 typ host
+     ├─ [2] type=video     port=9       proto=RTP/SAVPF       fmt=[97, 98, 120]
+     │       Connection (c=): IN IP6 ::1
+     │       Attributes (a=): 17 total
+     │         mid                     ×1    second
+     │         rtpmap                  ×3
+     │             ↳ 97 H264/90000
+     │             ↳ 98 H264/90000
+     │             ↳ 120 VP8/90000
+     │         recvonly                ×1    (flag — presence only)
+     │         setup                   ×1    active
+     │         rtcp-mux                ×1    (flag — presence only)
+     │         msid                    ×2
+     │             ↳ streama tracka
+     │             ↳ streamb trackb
+     │         candidate               ×8
+     │             ↳ 0 1 UDP 2130379007 10.0.0.36 59530 typ host
+     │             ↳ 0 2 UDP 2130379006 10.0.0.36 64378 typ host
+     │             ↳ 2 2 UDP 1694236670 24.6.134.204 64378 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 6 2 UDP 16515070 162.222.183.171 64941 typ relay raddr 162.222.18…
+     │             ↳ 6 1 UDP 16515071 162.222.183.171 64800 typ relay raddr 162.222.18…
+     │             ↳ 2 1 UDP 1694236671 24.6.134.204 59530 typ srflx raddr 10.0.0.36 r…
+     │             ↳ 3 1 UDP 100401151 162.222.183.171 62935 typ relay raddr 162.222.1…
+     │             ↳ 3 2 UDP 100401150 162.222.183.171 61026 typ relay raddr 162.222.1…
+     └─ [3] type=audio     port=9       proto=RTP/SAVPF       fmt=[0]
+             Attributes (a=): 4 total
+               mid                     ×1    third
+               rtpmap                  ×1    0 PCMU/8000
+               ice-lite                ×1    (flag — presence only)
+               msid                    ×1    noappdata
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=ice-ufrag:4a799b2e
+  │  a=ice-pwd:e4cc12a910f106a0a744719425510e17
+  │  a=ice-lite
+  │  a=msid-semantic:WMS stream streama
+  │  a=fingerprint:sha-256 DF:2E:AC:8A:FD:0A:8E:99:BF:5D:E8:3C:E7:FA:FB:08:3B:3C:54:1D:D7:D4:05:77:A0:72:9B:14:08:6D:0F:4C
+  │  a=group:BUNDLE first second
+  │  a=group:BUNDLE third
+  │  a=group:LS first third
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=mid:first
+  │  a=rtpmap:109 opus/48000/2
+  │  a=ptime:20
+  │  a=maxptime:20
+  │  a=rtpmap:9 G722/8000
+  │  a=rtpmap:0 PCMU/8000
+  │  a=rtpmap:8 PCMA/8000
+  │  a=rtpmap:101 telephone-event/8000
+  │  a=fmtp:101 0-15,66,32-34,67
+  │  a=ice-ufrag:00000000
+  │  a=ice-pwd:0000000000000000000000000000000
+  │  a=sendonly
+  │  a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+  │  a=setup:actpass
+  │  a=rtcp-mux
+  │  a=msid:stream track
+  │  a=candidate:0 1 UDP 2130379007 10.0.0.36 62453 typ host
+  │  a=candidate:2 1 UDP 1694236671 24.6.134.204 62453 typ srflx raddr 10.0.0.36 rport 62453
+  │  a=candidate:3 1 UDP 100401151 162.222.183.171 49761 typ relay raddr 162.222.183.171 rport 49761
+  │  a=candidate:6 1 UDP 16515071 162.222.183.171 51858 typ relay raddr 162.222.183.171 rport 51858
+  │  a=candidate:3 2 UDP 100401150 162.222.183.171 62454 typ relay raddr 162.222.183.171 rport 62454
+  │  a=candidate:2 2 UDP 1694236670 24.6.134.204 55428 typ srflx raddr 10.0.0.36 rport 55428
+  │  a=candidate:6 2 UDP 16515070 162.222.183.171 50340 typ relay raddr 162.222.183.171 rport 50340
+  │  a=candidate:0 2 UDP 2130379006 10.0.0.36 55428 typ host
+  │  m=video 9 RTP/SAVPF 97 98 120
+  │  c=IN IP6 ::1
+  │  a=mid:second
+  │  a=rtpmap:97 H264/90000
+  │  a=rtpmap:98 H264/90000
+  │  a=rtpmap:120 VP8/90000
+  │  a=recvonly
+  │  a=setup:active
+  │  a=rtcp-mux
+  │  a=msid:streama tracka
+  │  a=msid:streamb trackb
+  │  a=candidate:0 1 UDP 2130379007 10.0.0.36 59530 typ host
+  │  a=candidate:0 2 UDP 2130379006 10.0.0.36 64378 typ host
+  │  a=candidate:2 2 UDP 1694236670 24.6.134.204 64378 typ srflx raddr 10.0.0.36 rport 64378
+  │  a=candidate:6 2 UDP 16515070 162.222.183.171 64941 typ relay raddr 162.222.183.171 rport 64941
+  │  a=candidate:6 1 UDP 16515071 162.222.183.171 64800 typ relay raddr 162.222.183.171 rport 64800
+  │  a=candidate:2 1 UDP 1694236671 24.6.134.204 59530 typ srflx raddr 10.0.0.36 rport 59530
+  │  a=candidate:3 1 UDP 100401151 162.222.183.171 62935 typ relay raddr 162.222.183.171 rport 62935
+  │  a=candidate:3 2 UDP 100401150 162.222.183.171 61026 typ relay raddr 162.222.183.171 rport 61026
+  │  m=audio 9 RTP/SAVPF 0
+  │  a=mid:third
+  │  a=rtpmap:0 PCMU/8000
+  │  a=ice-lite
+  │  a=msid:noappdata
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 12.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 27987 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): (none at session level)
+  ├─ Session Attrs  (a=): 3 attributes
+  │    ice-ufrag               ×1    8a39d2ae
+  │    ice-pwd                 ×1    601d53aba51a318351b3ecf5ee00048f
+  │    fingerprint             ×1    sha-256 30:FF:8E:2B:AC:9D:ED:70:18:10:67:C8:AE:9E:68:F3:86:53:51:B0:A…
+  └─ Media Sections (m=): 3
+     ├─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+     │       Connection (c=): IN IP4 0.0.0.0
+     │       Attributes (a=): 13 total
+     │         rtpmap                  ×5
+     │             ↳ 109 opus/48000/2
+     │             ↳ 9 G722/8000
+     │             ↳ 0 PCMU/8000
+     │             ↳ 8 PCMA/8000
+     │             ↳ 101 telephone-event/8000
+     │         ptime                   ×1    20
+     │         fmtp                    ×1    101 0-15
+     │         sendrecv                ×1    (flag — presence only)
+     │         extmap                  ×3
+     │             ↳ 1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+     │             ↳ 2/sendonly some_extension
+     │             ↳ 3 some_other_extension some_params some more params
+     │         setup                   ×1    actpass
+     │         rtcp-mux                ×1    (flag — presence only)
+     ├─ [2] type=video     port=9       proto=RTP/SAVPF       fmt=[120, 126, 97]
+     │       Connection (c=): IN IP4 0.0.0.0
+     │       Attributes (a=): 30 total
+     │         rtpmap                  ×3
+     │             ↳ 120 VP8/90000
+     │             ↳ 126 H264/90000
+     │             ↳ 97 H264/90000
+     │         sendrecv                ×1    (flag — presence only)
+     │         rtcp-fb                 ×24
+     │             ↳ 120 ack rpsi
+     │             ↳ 120 ack app foo
+     │             ↳ 120 ack foo
+     │             ↳ 120 nack
+     │             ↳ 120 nack sli
+     │             ↳ 120 nack pli
+     │             ↳ 120 nack rpsi
+     │             ↳ 120 nack app foo
+     │             ↳ 120 nack foo
+     │             ↳ 120 ccm fir
+     │             ↳ 120 ccm tmmbr
+     │             ↳ 120 ccm tstr
+     │             ↳ 120 ccm vbcm
+     │             ↳ 120 ccm foo
+     │             ↳ 120 trr-int 10
+     │             ↳ 120 goog-remb
+     │             ↳ 120 foo
+     │             ↳ 126 nack
+     │             ↳ 126 nack pli
+     │             ↳ 126 ccm fir
+     │             ↳ 97 nack
+     │             ↳ 97 nack pli
+     │             ↳ 97 ccm fir
+     │             ↳ * ccm tmmbr
+     │         setup                   ×1    actpass
+     │         rtcp-mux                ×1    (flag — presence only)
+     └─ [3] type=application  port=9       proto=DTLS/SCTP       fmt=[5000]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 2 total
+               sctpmap                 ×1    5000 webrtc-datachannel 16
+               setup                   ×1    actpass
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 27987 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  t=0 0
+  │  a=ice-ufrag:8a39d2ae
+  │  a=ice-pwd:601d53aba51a318351b3ecf5ee00048f
+  │  a=fingerprint:sha-256 30:FF:8E:2B:AC:9D:ED:70:18:10:67:C8:AE:9E:68:F3:86:53:51:B0:AC:31:B7:BE:6D:CF:A4:2E:D3:6E:B4:28
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:109 opus/48000/2
+  │  a=ptime:20
+  │  a=rtpmap:9 G722/8000
+  │  a=rtpmap:0 PCMU/8000
+  │  a=rtpmap:8 PCMA/8000
+  │  a=rtpmap:101 telephone-event/8000
+  │  a=fmtp:101 0-15
+  │  a=sendrecv
+  │  a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+  │  a=extmap:2/sendonly some_extension
+  │  a=extmap:3 some_other_extension some_params some more params
+  │  a=setup:actpass
+  │  a=rtcp-mux
+  │  m=video 9 RTP/SAVPF 120 126 97
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  │  a=rtpmap:126 H264/90000
+  │  a=rtpmap:97 H264/90000
+  │  a=sendrecv
+  │  a=rtcp-fb:120 ack rpsi
+  │  a=rtcp-fb:120 ack app foo
+  │  a=rtcp-fb:120 ack foo
+  │  a=rtcp-fb:120 nack
+  │  a=rtcp-fb:120 nack sli
+  │  a=rtcp-fb:120 nack pli
+  │  a=rtcp-fb:120 nack rpsi
+  │  a=rtcp-fb:120 nack app foo
+  │  a=rtcp-fb:120 nack foo
+  │  a=rtcp-fb:120 ccm fir
+  │  a=rtcp-fb:120 ccm tmmbr
+  │  a=rtcp-fb:120 ccm tstr
+  │  a=rtcp-fb:120 ccm vbcm
+  │  a=rtcp-fb:120 ccm foo
+  │  a=rtcp-fb:120 trr-int 10
+  │  a=rtcp-fb:120 goog-remb
+  │  a=rtcp-fb:120 foo
+  │  a=rtcp-fb:126 nack
+  │  a=rtcp-fb:126 nack pli
+  │  a=rtcp-fb:126 ccm fir
+  │  a=rtcp-fb:97 nack
+  │  a=rtcp-fb:97 nack pli
+  │  a=rtcp-fb:97 ccm fir
+  │  a=rtcp-fb:* ccm tmmbr
+  │  a=setup:actpass
+  │  a=rtcp-mux
+  │  m=application 9 DTLS/SCTP 5000
+  │  c=IN IP4 0.0.0.0
+  │  a=sctpmap:5000 webrtc-datachannel 16
+  │  a=setup:actpass
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 13.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 27987 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): (none at session level)
+  ├─ Session Attrs  (a=): 3 attributes
+  │    ice-ufrag               ×1    8a39d2ae
+  │    ice-pwd                 ×1    601d53aba51a318351b3ecf5ee00048f
+  │    fingerprint             ×1    sha-256 30:FF:8E:2B:AC:9D:ED:70:18:10:67:C8:AE:9E:68:F3:86:53:51:B0:A…
+  └─ Media Sections (m=): 1
+     └─ [1] type=application  port=9       proto=UDP/DTLS/SCTP   fmt=[webrtc-datachannel]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 3 total
+               sctp-port               ×1    5000
+               max-message-size        ×1    10000
+               setup                   ×1    actpass
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 27987 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  t=0 0
+  │  a=ice-ufrag:8a39d2ae
+  │  a=ice-pwd:601d53aba51a318351b3ecf5ee00048f
+  │  a=fingerprint:sha-256 30:FF:8E:2B:AC:9D:ED:70:18:10:67:C8:AE:9E:68:F3:86:53:51:B0:AC:31:B7:BE:6D:CF:A4:2E:D3:6E:B4:28
+  │  m=application 9 UDP/DTLS/SCTP webrtc-datachannel
+  │  c=IN IP4 0.0.0.0
+  │  a=sctp-port:5000
+  │  a=max-message-size:10000
+  │  a=setup:actpass
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 14.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    candidate               ×1    0 1 UDP 2130379007 10.0.0.36 62453 typ host
+  └─ Media Sections (m=): 1
+     └─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    109 opus/48000/2
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=candidate:0 1 UDP 2130379007 10.0.0.36 62453 typ host
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:109 opus/48000/2
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 15.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    bundle-only             ×1    (flag — presence only)
+  └─ Media Sections (m=): 1
+     └─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    109 opus/48000/2
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=bundle-only
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:109 opus/48000/2
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 16.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    fmtp                    ×1    109 0-15
+  └─ Media Sections (m=): 1
+     └─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    109 opus/48000/2
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=fmtp:109 0-15
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:109 opus/48000/2
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 17.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    ice-mismatch            ×1    (flag — presence only)
+  └─ Media Sections (m=): 1
+     └─ [1] type=audio     port=9       proto=RTP/SAVPF       fmt=[109, 9, 0, 8, 101]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    109 opus/48000/2
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=ice-mismatch
+  │  m=audio 9 RTP/SAVPF 109 9 0 8 101
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:109 opus/48000/2
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 18.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    imageattr               ×1    120 send * recv *
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=imageattr:120 send * recv *
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 19.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    label                   ×1    foobar
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=label:foobar
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 20.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    maxptime                ×1    100
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=maxptime:100
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 21.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    mid                     ×1    foobar
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=mid:foobar
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 22.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    msid                    ×1    foobar
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=msid:foobar
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 23.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    ptime                   ×1    50
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=ptime:50
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 24.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    remote-candidates       ×1    0 10.0.0.1 5555
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=remote-candidates:0 10.0.0.1 5555
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 25.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    rtcp                    ×1    5555
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=rtcp:5555
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 26.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    rtcp-fb                 ×1    120 nack
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=rtcp-fb:120 nack
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 27.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    rtcp-mux                ×1    (flag — presence only)
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=rtcp-mux
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 28.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    rtcp-rsize              ×1    (flag — presence only)
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=rtcp-rsize
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 29.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    rtpmap                  ×1    120 VP8/90000
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=rtpmap:120 VP8/90000
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 30.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    sctpmap                 ×1    5000
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=sctpmap:5000
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 31.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    ssrc                    ×1    5000
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=ssrc:5000
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 32.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 1 attribute
+  │    ssrc-group              ×1    FID 5000
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  a=ssrc-group:FID 5000
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 33.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 2 total
+               rtpmap                  ×1    120 VP8/90000
+               imageattr               ×1    flob
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  │  a=imageattr:flob
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 34.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Bandwidth      (b=): CT:5000
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Attributes (a=): 2 total
+               rtpmap                  ×1    120 VP8/90000
+               sendrecv                ×1    (flag — presence only)
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  b=CT:5000
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  │  a=sendrecv
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 35.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Bandwidth      (b=): CT:5000
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Attributes (a=): 2 total
+               rtpmap                  ×1    120 VP8/90000
+               sendrecv                ×1    (flag — presence only)
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  b=CT:5000
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  │  a=sendrecv
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 36.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Bandwidth      (b=): CT:5000
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Attributes (a=): 2 total
+               rtpmap                  ×1    120 VP8/90000
+               sendrecv                ×1    (flag — presence only)
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  b=CT:5000
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  │  a=sendrecv
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 37.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Bandwidth      (b=): CT:5000
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Attributes (a=): 2 total
+               rtpmap                  ×1    120 VP8/90000
+               recvonly                ×1    (flag — presence only)
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  b=CT:5000
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  │  a=recvonly
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 38.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): - 4294967296 2 IN IP4 127.0.0.1
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 198.51.100.7
+  ├─ Bandwidth      (b=): CT:5000
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=56436   proto=RTP/SAVPF       fmt=[120]
+             Attributes (a=): 2 total
+               rtpmap                  ×1    120 VP8/90000
+               sendonly                ×1    (flag — presence only)
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=- 4294967296 2 IN IP4 127.0.0.1
+  │  s=SIP Call
+  │  c=IN IP4 198.51.100.7
+  │  b=CT:5000
+  │  t=0 0
+  │  m=video 56436 RTP/SAVPF 120
+  │  a=rtpmap:120 VP8/90000
+  │  a=sendonly
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 39.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────
+│  Processing: 40.sdp
+└─────────────────────────────────────────────────────────────
+  ✔  Parse successful
+  ├─ Session Name   (s=): SIP Call
+  ├─ Origin         (o=): Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  ├─ Timing         (t=): 0 0  — permanent/unbounded session (both values 0 per RFC 4566)
+  ├─ Connection     (c=): IN IP4 224.0.0.1/100/12
+  ├─ Session Attrs  (a=): 0 attributes
+  └─ Media Sections (m=): 1
+     └─ [1] type=video     port=9       proto=RTP/SAVPF       fmt=[120]
+             Connection (c=): IN IP4 0.0.0.0
+             Attributes (a=): 1 total
+               rtpmap                  ×1    120 VP8/90000
+
+  ── Reconstructed SDP ──────────────────────────────────────
+  │  v=0
+  │  o=Mozilla-SIPUA-35.0a1 5184 0 IN IP4 0.0.0.0
+  │  s=SIP Call
+  │  c=IN IP4 224.0.0.1/100/12
+  │  t=0 0
+  │  m=video 9 RTP/SAVPF 120
+  │  c=IN IP4 0.0.0.0
+  │  a=rtpmap:120 VP8/90000
+  ────────────────────────────────────────────────────────────
+
+╔══════════════════════════════════════════════════════════════╗
+║                        SUMMARY                               ║
+╠══════════════════════════════════════════════════════════════╣
+║  Total files checked : 39                                    ║
+║  ✔  Passed           : 39                                    ║
+║  ✘  Failed / Missing : 0                                     ║
+╠══════════════════════════════════════════════════════════════╣
+║  Parsed files:                                               ║
+║    ✔  02.sdp        media=1    session-attrs=0      media-attrs=1    ║
+║    ✔  03.sdp        media=1    session-attrs=0      media-attrs=28   ║
+║    ✔  04.sdp        media=1    session-attrs=0      media-attrs=1    ║
+║    ✔  05.sdp        media=0    session-attrs=1      media-attrs=0    ║
+║    ✔  06.sdp        media=2    session-attrs=0      media-attrs=2    ║
+║    ✔  07.sdp        media=1    session-attrs=0      media-attrs=1    ║
+║    ✔  08.sdp        media=3    session-attrs=11     media-attrs=63   ║
+║    ✔  09.sdp        media=1    session-attrs=0      media-attrs=27   ║
+║    ✔  10.sdp        media=1    session-attrs=0      media-attrs=6    ║
+║    ✔  11.sdp        media=3    session-attrs=8      media-attrs=45   ║
+║    ✔  12.sdp        media=3    session-attrs=3      media-attrs=45   ║
+║    ✔  13.sdp        media=1    session-attrs=3      media-attrs=3    ║
+║    ✔  14.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  15.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  16.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  17.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  18.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  19.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  20.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  21.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  22.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  23.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  24.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  25.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  26.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  27.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  28.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  29.sdp        media=1    session-attrs=1      media-attrs=0    ║
+║    ✔  30.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  31.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  32.sdp        media=1    session-attrs=1      media-attrs=1    ║
+║    ✔  33.sdp        media=1    session-attrs=0      media-attrs=2    ║
+║    ✔  34.sdp        media=1    session-attrs=0      media-attrs=2    ║
+║    ✔  35.sdp        media=1    session-attrs=0      media-attrs=2    ║
+║    ✔  36.sdp        media=1    session-attrs=0      media-attrs=2    ║
+║    ✔  37.sdp        media=1    session-attrs=0      media-attrs=2    ║
+║    ✔  38.sdp        media=1    session-attrs=0      media-attrs=2    ║
+║    ✔  39.sdp        media=1    session-attrs=0      media-attrs=1    ║
+║    ✔  40.sdp        media=1    session-attrs=0      media-attrs=1    ║
+╚══════════════════════════════════════════════════════════════╝
+
+Process finished with exit code 0

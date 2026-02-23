@@ -1,5 +1,12 @@
 # java-webrtc-sdp-parser — Java SDP Parser & Builder
 
+![Java Version](https://img.shields.io/badge/Java-25-orange?logo=openjdk&logoColor=white)
+![Maven Central](https://img.shields.io/maven-central/v/io.github.kinsleykajiva/java-webrtc-sdp-parser?color=blue)
+![WebRTC](https://img.shields.io/badge/WebRTC-Parser-blue?logo=webrtc&logoColor=white)
+![Networking](https://img.shields.io/badge/Networking-Protocol-green)
+![License](https://img.shields.io/github/license/kinsleykajiva/java-webrtc-sdp-parser?color=brightgreen)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/kinsleykajiva/java-webrtc-sdp-parser/deploy.yml?branch=master&label=deploy)
+
 > A Java library for parsing, representing, and reconstructing WebRTC Session Description Protocol (SDP) documents.  
 > Inspired by Mozilla's [`webrtc-sdp`](https://github.com/mozilla/webrtc-sdp) Rust crate. Test SDP files sourced from [mozilla/webrtc-sdp · examples/sdps](https://github.com/mozilla/webrtc-sdp/tree/master/examples/sdps).
 
